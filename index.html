@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" ng-app="cerebrawl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Cerebrawl</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    
+    <script src="http://cdn.jsdelivr.net/sockjs/0.3.4/sockjs.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/syncanojs/3.1.3beta/syncano.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+    <link rel="stylesheet" href="css/min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div id="row" class="row noselect" ng-controller="scoreController">
+        <div id="grey" class="col s6 " ng-click="incGrey()">
+            <h1 id="greyText">{{ grey }}</h1>
+            <div class='gang'>
+                <div class='container'>
+                    <div class='character dino'></div>
+                </div>
+            </div>
+        </div>
+        <div id="white" class="col s6 " ng-click="incWhite()">
+            <h1 id="whiteText">{{ white }}</h1>
+            <div class='gang'>
+                <div class='container'>
+                    <div class='batman character'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Cere-brawl!</h4>
+            <img src="images/brain.png" alt="brain">
+            <p>Where the greatest minds in the Universe fight to see who is Champion!</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Play</a>
+        </div>
+    </div>
+
+    <footer id="footer" class="page-footer z-depth-2">
+        <div class="container">
+            <div class="row">
+                <div class="col l5 s12">
+                    <h5 class="white-text">Cere-brawl!</h5>
+                    <p class="grey-text text-lighten-4">Made at HackNY Spring 2015</p>
+                </div>
+                <div class="col l3 offset-l2 s12">
+                    <h5 class="white-text">Follow Us</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://twitter.com/timsitorus1">@timsitorus1</a>
+                        </li>
+                        <li><a class="grey-text text-lighten-3" href="https://twitter.com/devchuk">@devchuk</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="footer-copyright">
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+    <script src="js/move.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+
+
+
+    $(document).ready(function() {
+        $('#modal1').openModal();
+    });
+    </script>
+    <script src="//cdn.jsdelivr.net/sockjs/0.3.4/sockjs.min.js"></script>
+    <script src="//cdn.jsdelivr.net/syncanojs/3.1.3beta/syncano.min.js"></script>
+</body>
+
+</html>
