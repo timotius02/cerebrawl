@@ -19,7 +19,7 @@ var params = {
     folders: 'Default'
 }
 var pointer_data_id1, pointer_data_id2;
-
+var win = true;
 while (win != true) {
     var pointer = new XMLHttpRequest();
     var url = "https://weathered-wood-115384.syncano.com/api/data.get_one";
@@ -56,6 +56,8 @@ while (win != true) {
         }
     }
     pointer.send(params);
+
+
 
 }
 
