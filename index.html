@@ -14,11 +14,11 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <!-- Compiled and minified CSS -->
-    
+
     <script src="http://cdn.jsdelivr.net/sockjs/0.3.4/sockjs.min.js"></script>
     <script src="http://cdn.jsdelivr.net/syncanojs/3.1.3beta/syncano.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+
     <link rel="stylesheet" href="css/min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -29,17 +29,17 @@
         <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div id="row" class="row noselect" ng-controller="scoreController">
-        <div id="grey" class="col s6 " ng-click="incGrey()">
-            <h1 id="greyText">{{ grey }}</h1>
+    <div id="row" class="row noselect">
+        <div id="grey" class="col s6 ">
+            <h1 id="greyText">150</h1>
             <div class='gang'>
                 <div class='container'>
                     <div class='character dino'></div>
                 </div>
             </div>
         </div>
-        <div id="white" class="col s6 " ng-click="incWhite()">
-            <h1 id="whiteText">{{ white }}</h1>
+        <div id="white" class="col s6 ">
+            <h1 id="whiteText">150</h1>
             <div class='gang'>
                 <div class='container'>
                     <div class='batman character'></div>
@@ -54,7 +54,8 @@
             <p>Where the greatest minds in the Universe fight to see who is Champion!</p>
         </div>
         <div class="modal-footer">
-            <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Play</a>
+            <a href="#" id="start" class="waves-effect waves-green btn-flat modal-action modal-close">Play</a>
+            <a href="#" id="checkout" class="waves-effect waves-green btn-flat modal-action modal-close">Live Test</a>
         </div>
     </div>
 
@@ -89,15 +90,16 @@
     <script src="js/main.js"></script>
 
     <script>
-
-
-
     $(document).ready(function() {
         $('#modal1').openModal();
+
+
     });
+
+    $('#start').on('click', start);
+    $('#grey').on('click', greyFunc);
+    $('#white').on('click', whiteFunc);
     </script>
-    <script src="//cdn.jsdelivr.net/sockjs/0.3.4/sockjs.min.js"></script>
-    <script src="//cdn.jsdelivr.net/syncanojs/3.1.3beta/syncano.min.js"></script>
 </body>
 
 </html>
